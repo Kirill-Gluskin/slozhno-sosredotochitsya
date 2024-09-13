@@ -1,15 +1,23 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
     font-family: var(--font-family);
     color: var(--paragraph-color);
-    /*background-image: url("/images/cover-image-dark.png");*/
+    background-image: url("/images/cover-image-dark.png");
     background-color: var(--background-color);
-    /*background-position: center;*/
-    /*background-attachment: fixed;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.container {
+    padding: 10px;
+
+    @media (min-width: 768px) {
+        padding: 20px;
+    }
+}
+
+/*styles for header*/
 
 .header__logo-wrapper {
     position: relative;
@@ -61,6 +69,128 @@
     }
 }
 
+.header__title {
+    color: var(--main-header-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0px var(--title-color);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
+    margin-block-start: 66px;
+
+    @media (min-width: 768px) {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        margin-block-start: 174px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-block-start: 274px;
+    }
+}
+
+.header__wrapper {
+    @media (min-width: 768px) {
+        margin-left: 50%;
+    }
+}
+
+.header__text {
+    margin-block-start: 55px;
+
+    @media (min-width: 768px) {
+        margin-block-start: 162px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-block-start: 114px;
+    }
+}
+
+.text-bold {
+    background-color: var(--title-bg-color);
+    color: var(--subtitle-color);
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+/*styles for main*/
+
+
+
+
+
+
+
+/*styles for footer*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 667px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: 1px solid transparent;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        border-top-color: var(--title-bg-color);
+        border-right-color: var(--title-bg-color);
+
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+        border-bottom-color: var(--title-bg-color);
+        border-left-color: var(--title-bg-color);
+    }
+}
+
+.footer__title {
+    color: var(--main-header-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 2px 2px 0 var(--title-color);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
+
+    @media (min-width: 768px) {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header {
     padding-bottom: 56px;
     position: relative;
@@ -97,13 +227,6 @@
     }
 }
 
-.container {
-    padding: 10px;
-
-    @media (min-width: 768px) {
-        padding: 20px;
-    }
-}
 
 .main {
     padding: 40px 0;
@@ -170,42 +293,9 @@
     outline: 1px solid var(--btn-hover-border-color);
 }
 
-.header__title {
-    color: var(--main-header-color);
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    text-shadow: 4px 4px 0px var(--title-color);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 82.5%;
-    margin-block-start: 66px;
 
-    @media (min-width: 768px) {
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        margin-block-start: 174px;
-    }
 
-    @media (min-width: 1024px) {
-        margin-block-start: 274px;
-    }
-}
 
-.header__wrapper {
-    @media (min-width: 768px) {
-        margin-left: 50%;
-    }
-}
-
-.header__text {
-    margin-block-start: 55px;
-
-    @media (min-width: 768px) {
-        margin-block-start: 162px;
-    }
-
-    @media (min-width: 1024px) {
-        margin-block-start: 114px;
-    }
-}
 
 .main__title {
     color: var(--title-color);
@@ -243,14 +333,7 @@
     margin-block-end: 10px;
 }
 
-.text-bold {
-    background-color: var(--title-bg-color);
-    color: var(--subtitle-color);
-    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-}
+
 
 .text-thin {
     background-color: var(--title-bg-color);
@@ -299,48 +382,5 @@
     }
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 667px;
-    position: relative;
 
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 25px;
-        height: 25px;
-        border: 1px solid transparent;
-    }
 
-    &::before {
-        top: 0;
-        right: 0;
-        border-top-color: var(--title-bg-color);
-        border-right-color: var(--title-bg-color);
-
-    }
-
-    &::after {
-        bottom: 0;
-        left: 0;
-        border-bottom-color: var(--title-bg-color);
-        border-left-color: var(--title-bg-color);
-    }
-}
-
-.footer__title {
-    color: var(--main-header-color);
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    text-shadow: 2px 2px 0 var(--title-color);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 82.5%;
-
-    @media (min-width: 768px) {
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    }
-}
