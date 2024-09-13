@@ -1,5 +1,287 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    font-family: var(--font-family);
+    color: var(--paragraph-color);
+    /*background-image: url("/images/cover-image-dark.png");*/
+    background-color: var(--background-color);
+    /*background-position: center;*/
+    /*background-attachment: fixed;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+}
+
+.header__logo-wrapper {
+    position: relative;
+    padding-right: 28px;
+}
+
+.header__logo-text {
+    display: block;
+    font-size: var(--font-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 138.889%;
+    text-transform: uppercase;
+    color: #ff0070;
+    margin-right: 10px;
+}
+
+.header__logo {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+    display: block;
+    background-color: var(--title-bg-color);
+    width: 10px;
+    height: 10px;
+    filter: drop-shadow(0 0 4px var(--title-bg-color));
+    box-shadow: 0 0 4px 2px var(--title-bg-color);
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -9px;
+        top: -9px;
+        background-color: var(--title-bg-color);
+    }
+
+    &::before {
+        width: 25px;
+        height: 1px;
+    }
+
+    &::after {
+        width: 1px;
+        height: 25px;
+    }
+}
+
+.header {
+    padding-bottom: 56px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--title-bg-color);
+    }
+
+    &::before {
+        width: 25px;
+        height: 1px;
+    }
+
+    &::after {
+        width: 1px;
+        height: 25px;
+    }
+}
+
+.header__theme-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 40px;
+}
+
+.container {
+    padding: 10px;
+
+    @media (min-width: 768px) {
+        padding: 20px;
+    }
+}
+
+.main {
+    padding: 40px 0;
+}
+
+.section {
+    margin-block-end: 50px;
+
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.section__column {
+    flex-direction: column;
+}
+
+.header__theme-menu-button {
+    color: var(--title-color);
+    min-height: 26px;
+    padding: 0px 13px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        border-bottom: 1px solid var(--btn-hover-border-color);
+    }
+}
+
+.header__theme-menu-button_active {
+    border: 1px solid var(--btn-activ-focus-border-color);
+    pointer-events: none;
+}
+
+.header__theme-menu-item:hover {
+    outline: 1px solid var(--btn-hover-border-color);
+}
+
+.header__title {
+    color: var(--main-header-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0px var(--title-color);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
+}
+
+.header__text {
+    margin-block-start: 55px;
+}
+
+.main__title {
+    color: var(--title-color);
+    font-size: var(--font-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-block-end: 20px;
+
+    @media (min-width: 768px) {
+        flex: 0 0 auto;
+        width: 236px;
+    }
+}
+
+.main__text {
+    margin-block-end: 20px;
+}
+
+.main__text-link {
+    text-shadow: 2px 2px 0 var(--title-bg-color);
+}
+
+.main__subtitle {
+    margin-block-end: 10px;
+}
+
+.text-bold {
+    background-color: var(--title-bg-color);
+    color: var(--subtitle-color);
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.text-thin {
+    background-color: var(--title-bg-color);
+    color: var(--subtitle-color);
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.main__pictures-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: 768px) {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+    }
+}
+
+@media (min-width: 768px) {
+    .sunset {
+        grid-area: sunset;
+    }
+
+    .ice-cream {
+        grid-area: ice-cream;
+    }
+
+    .street {
+        grid-area: street ;
+    }
+
+    .books {
+        grid-area: books ;
+    }
+
+    .tape {
+        grid-area: tape ;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 667px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: 1px solid transparent;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        border-top-color: var(--title-bg-color);
+        border-right-color: var(--title-bg-color);
+
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+        border-bottom-color: var(--title-bg-color);
+        border-left-color: var(--title-bg-color);
+    }
+}
+
+.footer__title {
+    color: var(--main-header-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 2px 2px 0 var(--title-color);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
 }
