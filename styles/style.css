@@ -57,6 +57,20 @@
     @media (min-width: 768px) {
         gap: 147px;
     }
+
+    @media (min-width: 1024px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: unset;
+    }
+}
+
+.header__theme-menu-list {
+    @media (min-width: 1024px) {
+        display: flex;
+        gap: 23px;
+        margin: 0 auto;
+    }
 }
 
 .header__theme-menu-button {
@@ -70,6 +84,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+    text-transform: lowercase;
     cursor: pointer;
 
     &:focus {
@@ -109,8 +124,8 @@
 .header__logo {
     position: absolute;
     top: 50%;
-    right: 9px;
     transform: translateY(-50%);
+    right: 9px;
     display: block;
     background-color: var(--title-bg-color);
     width: 10px;
