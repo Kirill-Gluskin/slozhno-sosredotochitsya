@@ -1,7 +1,7 @@
 .page {
     font-family: var(--font-family);
     color: var(--paragraph-color);
-    background-image: url("/images/cover-image-dark.png");
+    background-image: var(--background-image);
     background-color: var(--background-color);
     background-position: center;
     background-attachment: fixed;
@@ -30,7 +30,6 @@
 .header {
     padding-bottom: 56px;
     position: relative;
-    height: 100vh;
 
     &::before,
     &::after {
@@ -39,7 +38,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: var(--title-bg-color);
+        background-color: var(--decoration-elem-color);
     }
 
     &::before {
@@ -110,7 +109,7 @@
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--btn-activ-focus-border-color);
+    border: 1px solid var(--btn-active-focus-border-color);
     pointer-events: none;
 }
 
@@ -154,7 +153,7 @@
         position: absolute;
         right: -9px;
         top: -9px;
-        background-color: var(--title-bg-color);
+        background-color: var(--decoration-elem-color);
     }
 
     &::before {
@@ -171,7 +170,7 @@
 .header__title {
     color: var(--main-header-color);
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    text-shadow: 4px 4px 0px var(--title-color);
+    text-shadow: 4px 4px 0 var(--title-shadow-color);
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;
@@ -290,7 +289,19 @@
 }
 
 .section__link {
-    text-shadow: 2px 2px 0 var(--title-bg-color);
+    text-shadow: 2px 2px 0 var(--link-shadow-color);
+
+    &:hover {
+        border-bottom: 1px solid var(--paragraph-color);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        border: 1px solid var(--paragraph-color);
+    }
 }
 
 .section__pictures-wrapper {
@@ -354,16 +365,15 @@
     &::before {
         top: 0;
         right: 0;
-        border-top-color: var(--title-bg-color);
-        border-right-color: var(--title-bg-color);
-
+        border-top-color: var(--decoration-elem-color);
+        border-inline-end-color: var(--decoration-elem-color);
     }
 
     &::after {
         bottom: 0;
         left: 0;
-        border-bottom-color: var(--title-bg-color);
-        border-left-color: var(--title-bg-color);
+        border-bottom-color: var(--decoration-elem-color);
+        border-inline-start-color: var(--decoration-elem-color);
     }
 
     @media (min-width: 768px) {
@@ -378,7 +388,7 @@
 .footer__title {
     color: var(--main-header-color);
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    text-shadow: 2px 2px 0 var(--title-color);
+    text-shadow: 2px 2px 0 var(--link-shadow-color);
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;

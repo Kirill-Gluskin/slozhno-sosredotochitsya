@@ -1,12 +1,16 @@
 :root {
-    --font-family: "IBM Plex mono", sans-serif;
+    --font-family: "IBM Plex mono", monospace;
     --font-size: 18px;
+    --background-image: url("../images/cover-image-dark.png");
     --background-color: #000028;
     --paragraph-color: #f1b2ce;
     --main-header-color: #db00ff;
     --title-color: #ff0070;
+    --title-shadow-color: #ff0070;
     --subtitle-color: #000028;
     --title-bg-color: #ff0070;
+    --link-shadow-color: #ff0070;
+    --decoration-elem-color: #ff0070;
     --btn-hover-border-color: rgba(255, 0, 112, 0.4);
-    --btn-activ-focus-border-color: #ff0070;
+    --btn-active-focus-border-color: #ff0070;
 }
