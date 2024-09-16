@@ -30,6 +30,8 @@
 .header {
     padding-bottom: 56px;
     position: relative;
+    height: 100vh;
+    min-height: 647px;
 
     &::before,
     &::after {
@@ -52,10 +54,12 @@
     }
 
     @media (min-width: 768px) {
+        min-height: 984px;
         padding-bottom: 163px;
     }
 
     @media (min-width: 1024px) {
+        min-height: 728px;
         padding-bottom: 114px;
     }
 }
