@@ -336,6 +336,11 @@
     "tape books ice-cream"
     "tape street street";
     }
+
+    @media (min-width: 1024px) {
+        gap: 23px;
+        grid-template-rows: 260px 315px 428px;
+    }
 }
 
 @media (min-width: 768px) {
