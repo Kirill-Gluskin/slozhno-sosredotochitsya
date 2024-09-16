@@ -10,7 +10,7 @@
 }
 
 .main {
-    padding: 30px 0;
+    padding: 40px 0;
 
     @media (min-width: 768px) {
         padding-top: 40px;
@@ -226,18 +226,17 @@
 
 .section {
     padding: 10px;
-    margin-block-end: 14px;
+    margin-block-end: 20px;
 
     @media (min-width: 768px) {
         display: flex;
         gap: 20px;
         padding: 20px;
-        margin-block-end: 20px;
     }
 }
 
 .section__column {
-    margin-block-end: 12px;
+    margin-block-end: 20px;
 
     @media (min-width: 768px) {
         flex-direction: column;
@@ -277,7 +276,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
-    margin-block-end: 19px;
+    margin-block-end: 20px;
 
     @media (min-width: 768px) {
         flex: 0 0 auto;
@@ -312,11 +311,7 @@
 .section__text {
     font-size: var(--font-size);
     line-height: 130%;
-    margin-block-end: 18px;
-
-    @media (min-width: 768px) {
-        margin-block-end: 19px;
-    }
+    margin-block-end: 20px;
 }
 
 .section__link {
