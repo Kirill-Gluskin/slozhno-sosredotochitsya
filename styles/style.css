@@ -18,7 +18,7 @@
 }
 
 .main {
-    padding: 60px 0;
+    padding: 51px 0;
 
     @media (min-width: 768px) {
         padding: 80px 0;
@@ -30,7 +30,7 @@
 .header {
     padding-bottom: 56px;
     position: relative;
-    height: 100vh;
+    /*height: 100vh;*/
     min-height: 647px;
 
     &::before,
@@ -219,7 +219,7 @@
 /*styles for section*/
 
 .section {
-    margin-block-end: 50px;
+    margin-block-end: 52px;
 
     @media (min-width: 768px) {
         display: flex;
@@ -229,7 +229,7 @@
 }
 
 .section__column {
-    margin-block-end: 30px;
+    margin-block-end: 32px;
 
     @media (min-width: 768px) {
         flex-direction: column;
@@ -268,7 +268,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
-    margin-block-end: 20px;
+    margin-block-end: 19px;
 
     @media (min-width: 768px) {
         flex: 0 0 auto;
@@ -296,7 +296,7 @@
 
 .section__text {
     font-size: var(--font-size);
-    margin-block-end: 20px;
+    margin-block-end: 18px;
 }
 
 .section__link {
@@ -359,7 +359,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /*height: 100vh;*/
     min-height: 647px;
     position: relative;
 
