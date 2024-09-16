@@ -22,3 +22,30 @@
 .theme_light .header__logo::after {
     visibility: visible;
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-image: url("../images/cover-image-light.png");
+        --background-color: #fff1f7;
+        --paragraph-color: #353430;
+        --main-header-color: #ffc2e6;
+        --title-color: #353430;
+        --title-shodow-color:  4px 4px 0 #ff0070;
+        --title-bg-color: #ff8dcb;
+        --subtitle-color: #353430;
+        --link-shadow-color: #f1b2ce;
+        --decoration-elem-color: #353430;
+        --btn-hover-border-color: rgba(50, 49, 45, 0.4);
+        --btn-active-focus-border-color: #353430;
+    }
+
+    .header__logo-text:not(.theme_dark .header__logo-text),
+    .header__logo:not(.theme_dark .header__logo) {
+        visibility: hidden;
+    }
+
+    .theme_auto .header__logo::before,
+    .theme_auto .header__logo::after {
+        visibility: visible;
+    }
+}
