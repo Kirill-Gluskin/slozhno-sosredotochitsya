@@ -29,7 +29,6 @@
 /*styles for header*/
 
 .header {
-    padding-bottom: 56px;
     position: relative;
     height: 100vh;
     min-height: 647px;
@@ -39,8 +38,8 @@
         content: "";
         display: block;
         position: absolute;
-        left: 0;
-        bottom: 0;
+        left: 10px;
+        bottom: 10px;
         background-color: var(--decoration-elem-color);
     }
 
@@ -56,12 +55,16 @@
 
     @media (min-width: 768px) {
         min-height: 984px;
-        padding-bottom: 163px;
+
+        &::before,
+        &::after {
+            left: 20px;
+            bottom: 20px;
+        }
     }
 
     @media (min-width: 1024px) {
         min-height: 728px;
-        padding-bottom: 114px;
     }
 }
 
@@ -394,15 +397,15 @@
     }
 
     &::before {
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 10px;
         border-top-color: var(--decoration-elem-color);
         border-inline-end-color: var(--decoration-elem-color);
     }
 
     &::after {
-        bottom: 0;
-        left: 0;
+        bottom: 10px;
+        left: 10px;
         border-bottom-color: var(--decoration-elem-color);
         border-inline-start-color: var(--decoration-elem-color);
     }
@@ -413,6 +416,19 @@
 
     @media (min-width: 1024px) {
         min-height: 728px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .footer::before {
+        top: 20px;
+        right: 20px;
+    }
+
+    .footer::after {
+        bottom: 20px;
+        left: 20px;
     }
 }
 
