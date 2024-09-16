@@ -101,7 +101,7 @@
 .header__theme-menu-button {
     color: var(--title-color);
     min-height: 26px;
-    padding: 0 13px 3px;
+    padding: 2px 13px 4px;
     text-align: center;
     background-color: transparent;
     border: none;
@@ -311,6 +311,7 @@
 
 .section__text {
     font-size: var(--font-size);
+    line-height: 130%;
     margin-block-end: 18px;
 
     @media (min-width: 768px) {
