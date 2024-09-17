@@ -8,12 +8,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 10px;
+
+    @media (min-width: 768px) {
+        padding: 0 20px;
+    }
 }
 
 .main {
     display: grid;
     gap: 50px;
     padding: 40px 0;
+
+    @media (min-width: 768px) {
+        gap: 80px;
+    }
 }
 
 /*styles for header*/
@@ -27,7 +35,7 @@
     min-height: 668px;
     
     @media (min-width: 768px) {
-        padding: 20px;
+        padding: 20px 0;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -48,25 +56,23 @@
 .decorated-zone::before {
     border-right: 1px solid currentColor;
     border-top: 1px solid currentColor;
-    right: 0px;
+    right: 0;
     top: 10px;
 }
 
 .decorated-zone::after {
     border-left: 1px solid currentColor;
     border-bottom: 1px solid currentColor;
-    left: 0px;
+    left: 0;
     bottom: 10px;
 }
 
 @media (min-width: 768px) {
     .decorated-zone::before {
-        right: 20px;
         top: 20px;
     }
 
     .decorated-zone::after {
-        left: 20px;
         bottom: 20px;
     }
 }
@@ -175,7 +181,6 @@
     }
 
     @media (min-width: 768px) {
-        right: 30px;
         top: 20px;
     }
 }
@@ -189,14 +194,12 @@
     @media (min-width: 768px) {
         display: flex;
         gap: 20px;
-        padding: 20px;
     }
 }
 
-.section__column {
+.section__another-style {
     @media (min-width: 768px) {
         flex-direction: column;
-        margin-block-end: 20px;
     }
 }
 
@@ -204,7 +207,6 @@
     margin-block-end: 0;
 
     @media (min-width: 768px) {
-        margin-block-start: 10px;
         display: block;
     }
 }
@@ -241,6 +243,10 @@
 .section__article {
     display: grid;
     gap: 20px;
+
+    @media (min-width: 768px) {
+        gap: 10px;
+    }
 }
 
 .title__column {
@@ -334,19 +340,6 @@
     min-height: 668px;
     position: relative;
     padding: 10px 0;
-}
-
-@media (min-width: 768px) {
-
-    .footer::before {
-        top: 20px;
-        right: 20px;
-    }
-
-    .footer::after {
-        bottom: 20px;
-        left: 20px;
-    }
 }
 
 .footer__title {
