@@ -18,11 +18,6 @@
     visibility: hidden;
 }
 
-.theme_light .header__logo::before,
-.theme_light .header__logo::after {
-    visibility: visible;
-}
-
 @media (prefers-color-scheme: light) {
     :root {
         --background-image: url("../images/cover-image-light.png");
@@ -42,10 +37,5 @@
     .header__logo-text:not(.theme_dark .header__logo-text),
     .header__logo:not(.theme_dark .header__logo) {
         visibility: hidden;
-    }
-
-    .theme_auto .header__logo::before,
-    .theme_auto .header__logo::after {
-        visibility: visible;
     }
 }
