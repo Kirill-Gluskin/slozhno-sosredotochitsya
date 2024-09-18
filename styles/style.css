@@ -115,7 +115,7 @@
     cursor: pointer;
 
     &:hover {
-        border: 1px solid currentColor;
+        border: 1px solid var(--btn-hover-border-color);
     }
 
     &:focus {
@@ -194,11 +194,10 @@
 
     @media (min-width: 768px) {
         display: flex;
-        gap: 20px;
     }
 }
 
-.section__another-style {
+.section__why {
     @media (min-width: 768px) {
         flex-direction: column;
     }
@@ -236,29 +235,23 @@
 
 .article__wrapper {
     @media (min-width: 1024px) {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
     }
 }
 
 .section__article {
     display: grid;
     gap: 10px;
-
-    @media (min-width: 768px) {
-        gap: 10px;
-    }
 }
 
-.section__article-another-style {
+.section__article-why {
     @media (min-width: 1024px) {
         display: flex;
         flex-direction: column;
     }
 }
 
-.title__column {
+.title__why {
     @media (min-width: 768px) {
         margin-block-end: unset;
     }
